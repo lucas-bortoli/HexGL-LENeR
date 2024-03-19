@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>HexGL by BKcore</title>
+    <title>HexGL by Thibaut Despoulain (2010) / Lucas Bortoli (2024)</title>
     <meta charset="utf-8" />
     <meta
       name="description"
@@ -58,24 +58,21 @@
         left: 0;
         width: 100%;
       }
+
+      .ui-text-container {
+        font-family: sans-serif;
+        color: white;
+        text-align: center;
+        text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
+          1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000,
+          2px 2px #000;
+      }
+
+      .ui-text-container ul {
+        list-style: none;
+        padding: unset;
+      }
     </style>
-    <script type="text/javascript">
-      //analytics
-      var _gaq = _gaq || [];
-      _gaq.push(["_setAccount", "UA-26274524-4"]);
-      _gaq.push(["_trackPageview"]);
-      (function () {
-        var ga = document.createElement("script");
-        ga.type = "text/javascript";
-        ga.async = true;
-        ga.src =
-          ("https:" == document.location.protocol
-            ? "https://ssl"
-            : "http://www") + ".google-analytics.com/ga.js";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </head>
 
   <body>
@@ -83,13 +80,18 @@
       <div id="global"></div>
       <div id="title"></div>
       <div id="menucontainer">
+        <div class="ui-text-container">
+          Projeto original por Thibaut Despoulain<br />
+          Mod desenvolvido por Lucas Bortoli<br />
+          Controle adaptivo desenvolvido por Lucas Bortoli & Isis Nunes
+        </div>
         <div id="menu">
-          <div id="start">Start</div>
-          <div id="s-controlType">Controls: Keyboard</div>
+          <div id="start">Iniciar Jogo</div>
+          <div id="s-controlType">Controles: Teclado</div>
           <div id="s-quality">Quality: High</div>
-          <div id="s-hud">HUD: On</div>
-          <div id="s-godmode" style="display: none">Godmode: Off</div>
-          <div id="s-credits">Credits</div>
+          <div id="s-hud" style="display: none">HUD: On</div>
+          <div id="s-godmode" style="display: none">Godmode: Ativado</div>
+          <div id="s-credits" style="display: none">Credits</div>
         </div>
       </div>
     </div>
@@ -161,6 +163,6 @@
 
     <script src="bkcore/hexgl/HexGL.js"></script>
 
-    <script src="launch.js"></script>
+    <script src="bkcore/launch.js"></script>
   </body>
 </html>
